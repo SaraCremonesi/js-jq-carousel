@@ -1,7 +1,6 @@
 $(document).ready(function ()
  {
-   // Al click sulla freccia tolgo la classe active dall'immagine corrente e la metto sull'immagine successiva,
-   // e tolgo la classe active dal cerchietto corrente e la metto sul cerchietto successivo
+   //Invoco la funzione per attivare il carosello
    $('.next').click(
     function() {
       nextStep()
@@ -9,6 +8,7 @@ $(document).ready(function ()
  });
 
 // **********FUNZIONI**********
+// Scrivo una funzione per passare all'immagine/cerchietto successivo
 function nextStep() {
   var immagineCorrente = $('.images img.active');
   immagineCorrente.removeClass('active');
