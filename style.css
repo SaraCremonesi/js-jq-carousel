@@ -23,6 +23,7 @@
 .slider-wrapper .images img {
     display: none;
     height: 100%;
+    border-radius: 20px;
 }
 .slider-wrapper .images img.active {
     display: inline-block;
@@ -55,4 +56,8 @@
 }
 .nav > i.active {
     color: blue;
+}
+
+.blue {
+  color: blue;
 }

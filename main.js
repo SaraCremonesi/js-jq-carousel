@@ -7,6 +7,33 @@ $(document).ready(function ()
     })
  });
 
+ // ABBELLISCO LO SLIDER
+ // All'hover del mouse le frecce si colorano di blu
+ $('.fa-angle-left').mouseenter(
+   function() {
+     $('.fa-angle-left').addClass('blue')
+   }
+ );
+
+ $('.fa-angle-right').mouseenter(
+   function() {
+     $('.fa-angle-right').addClass('blue')
+   }
+ );
+
+ // Senza l'hover del mouse le frecce tornano di colore grigio
+ $('.fa-angle-left').mouseleave(
+   function() {
+     $('.fa-angle-left').removeClass('blue')
+   }
+ );
+
+ $('.fa-angle-right').mouseleave(
+   function() {
+     $('.fa-angle-right').removeClass('blue')
+   }
+ );
+
 // **********FUNZIONI**********
 // Scrivo una funzione per passare all'immagine/cerchietto successivo
 function nextStep() {
