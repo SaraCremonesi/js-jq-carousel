@@ -7,7 +7,7 @@
 .container {
     display: flex;
     margin: 0 auto;
-    width: 70%;
+    width: 75%;
     height: 100vh;
 }
 .slider-wrapper {
@@ -19,6 +19,7 @@
 .slider-wrapper .images {
     height: 100%;
     text-align: center;
+    width: 100%;
 }
 .slider-wrapper .images img {
     display: none;
