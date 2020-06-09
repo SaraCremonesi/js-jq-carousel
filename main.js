@@ -9,28 +9,28 @@ $(document).ready(function ()
 
  // ABBELLISCO LO SLIDER
  // All'hover del mouse le frecce si colorano di blu
- $('.fa-angle-left').mouseenter(
+ $('.prev').mouseenter(
    function() {
-     $('.fa-angle-left').addClass('blue')
+     $('.prev').addClass('blue')
    }
  );
 
- $('.fa-angle-right').mouseenter(
+ $('.next').mouseenter(
    function() {
-     $('.fa-angle-right').addClass('blue')
+     $('.next').addClass('blue')
    }
  );
 
  // Senza l'hover del mouse le frecce tornano di colore grigio
- $('.fa-angle-left').mouseleave(
+ $('.prev').mouseleave(
    function() {
-     $('.fa-angle-left').removeClass('blue')
+     $('.prev').removeClass('blue')
    }
  );
 
- $('.fa-angle-right').mouseleave(
+ $('.next').mouseleave(
    function() {
-     $('.fa-angle-right').removeClass('blue')
+     $('.next').removeClass('blue')
    }
  );
 
@@ -40,7 +40,7 @@ function nextStep() {
   var immagineCorrente = $('.images img.active');
   immagineCorrente.removeClass('active');
 
-  var cerchioCorrente = $('.fa-circle.active');
+  var cerchioCorrente = $('.nav i.active');
   cerchioCorrente.removeClass('active');
 
   if (immagineCorrente.hasClass('last')) {
@@ -50,7 +50,7 @@ function nextStep() {
   }
 
   if (cerchioCorrente.hasClass('last')) {
-    $('.fas.fa-circle.first').addClass('active')
+    $('nav i.first').addClass('active')
   } else {
     cerchioCorrente.next().addClass('active')
   }
