@@ -5,6 +5,17 @@ $(document).ready(function ()
     function() {
       nextStep()
     })
+
+    $('.prev').click(
+     function() {
+       nextStep()
+     })
+
+     $('.nav i').click(
+      function() {
+        var indice = $(this).index();
+        mostraImmagineSelezionata();
+      })
  });
 
  // ABBELLISCO LO SLIDER
@@ -50,8 +61,16 @@ function nextStep() {
   }
 
   if (cerchioCorrente.hasClass('last')) {
-    $('nav i.first').addClass('active')
+    $('.nav i.first').addClass('active')
   } else {
     cerchioCorrente.next().addClass('active')
   }
+};
+
+function mostraImmagineSelezionata(indice) {
+  $('.images img.active').removeClass('active');
+  $('.nav i.active').removeClass('active');
+
+  $('.images img.active').eq(indice).addClass('active');
+  $('.nav i.active').eq(indice).addClass('active');
 }
