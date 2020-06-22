@@ -14,7 +14,7 @@ $(document).ready(function ()
      $('.nav i').click(
       function() {
         var indice = $(this).index();
-        mostraImmagineSelezionata();
+        mostraImmagineSelezionata(indice);
       })
  });
 
@@ -71,6 +71,6 @@ function mostraImmagineSelezionata(indice) {
   $('.images img.active').removeClass('active');
   $('.nav i.active').removeClass('active');
 
-  $('.images img.active').eq(indice).addClass('active');
-  $('.nav i.active').eq(indice).addClass('active');
+  $('.images img').eq(indice).addClass('active');
+  $('.nav i').eq(indice).addClass('active');
 }
